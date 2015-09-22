@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-from=nowk/alpine-nodejs:0.12.2
+from=nowk/alpine-nodejs:4.1.0
 
 # remove .cid, incase there is a lingering one
 if [ -f .cid ] ; then

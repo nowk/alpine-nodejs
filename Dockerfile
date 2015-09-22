@@ -1,9 +1,11 @@
 FROM nowk/alpine-bare:3.2
 MAINTAINER Yung Hwa Kwon <yung.kwon@damncarousel.com>
 
-ENV NODE_VERSION 0.12.2
+ENV NODE_VERSION 4.1.0
 
-RUN apk --update add \
+RUN apk \
+	--update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/main \
+	--update add \
 	nodejs=${NODE_VERSION}-r0 \
 	&& rm -rf /var/cache/apk/*
 
