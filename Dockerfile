@@ -9,9 +9,8 @@ RUN apk \
 	nodejs=${NODE_VERSION}-r0 \
 	&& rm -rf /var/cache/apk/*
 
+# copy max_user_watches.sh for use in build.sh
 COPY max_user_watches.sh /max_user_watches.sh
-ENTRYPOINT [ "/bin/sh" ]
-
 
 LABEL \
 	version=$NODE_VERSION \
